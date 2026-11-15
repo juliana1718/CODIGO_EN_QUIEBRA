@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende programación en Código En Quiebra.">
+    <title>Programación | Código En Quiebra</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/accesibilidad.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <header class="encabezado">
+        <a class="logo" href="index.html">Código <span>En Quiebra</span></a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a class="activo" href="programacion.html" aria-current="page">Programación</a>
+            <a href="contabilidad.html">Contabilidad y PUC</a>
+            <a href="matematicas.html">Matemáticas</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="perfil.html">Mi perfil</a>
+        </nav>
+    </header>
+
+    <main id="contenido" class="contenido-pagina" tabindex="-1">
+
+        <span class="etiqueta">ÁREA DE APRENDIZAJE 01</span>
+
+        <h1>Programación</h1>
+
+        <p>
+            Aprende a desarrollar programas, comprender la lógica
+            computacional y construir soluciones mediante diferentes
+            lenguajes de programación.
+        </p>
+
+        <section class="zona-juegos" id="juegos_programacion">
+
+            <div class="juegos-encabezado">
+                <span class="juegos-etiqueta">ZONA INTERACTIVA</span>
+                <h2><span aria-hidden="true">🎮</span> Desafíos de Programación</h2>
+                <p>
+                    Aprende, demuestra tus conocimientos y supera diferentes
+                    desafíos. ¡Cada respuesta te acerca a convertirte en un programador!
+                </p>
+            </div>
+
+            <div class="juegos-tarjetas">
+
+                <article class="juego-tarjeta">
+                    <div class="juego-icono" aria-hidden="true">🧠</div>
+                    <h3>Reto 1: Verdadero o falso</h3>
+                    <p>
+                        Pon a prueba tus conocimientos sobre programación,
+                        lógica, variables y lenguajes.
+                    </p>
+                    <span class="juego-nivel">Nivel básico e intermedio</span>
+                    <button type="button" class="boton-juego" id="iniciar-quiz">
+                        Comenzar desafío →
+                    </button>
+                </article>
+
+                <article class="juego-tarjeta">
+                    <div class="juego-icono" aria-hidden="true">💻</div>
+                    <h3>Reto 2: Desarrollador de código</h3>
+                    <p>
+                        Escribe instrucciones en Python, resuelve problemas
+                        y demuestra tus habilidades.
+                    </p>
+                    <span class="juego-nivel">Nivel práctico</span>
+                    <button type="button" class="boton-juego" id="iniciar-codigo">
+                        Comenzar a programar →
+                    </button>
+                </article>
+
+            </div>
+
+            <!-- JUEGO VERDADERO O FALSO -->
+
+            <div class="juego-panel" id="panel-quiz" hidden>
+
+                <div class="juego-panel-superior">
+                    <div>
+                        <span class="juegos-etiqueta">DESAFÍO 01</span>
+                        <h3><span aria-hidden="true">🧠</span> Verdadero o falso</h3>
+                    </div>
+                    <span class="juego-contador" id="contador-quiz">
+                        Pregunta 1 de 8
+                    </span>
+                </div>
+
+                <div class="barra-progreso">
+                    <div id="progreso-quiz"></div>
+                </div>
+
+                <div class="pregunta-contenedor">
+                    <span class="pregunta-etiqueta">PREGUNTA</span>
+                    <h3 id="pregunta-quiz" tabindex="-1"></h3>
+                    <p id="numero-pregunta"></p>
+                </div>
+
+                <div class="opciones-quiz">
+                    <button type="button" class="opcion-quiz" data-respuesta="verdadero">
+                        <span aria-hidden="true">✓</span>
+                        Verdadero
+                    </button>
+
+                    <button type="button" class="opcion-quiz" data-respuesta="falso">
+                        <span aria-hidden="true">✕</span>
+                        Falso
+                    </button>
+                </div>
+
+                <p id="resultado-quiz" class="mensaje-juego"
+                    role="status" aria-live="polite"></p>
+
+                <div class="juego-acciones">
+                    <button type="button" class="boton-juego" id="siguiente-quiz" disabled>
+                        Siguiente pregunta →
+                    </button>
+
+                    <button type="button" class="boton-secundario" id="salir-quiz">
+                        Salir del juego
+                    </button>
+                </div>
+
+                <div id="final-quiz" class="resultado-final" hidden>
+                    <div class="resultado-icono" aria-hidden="true">🏆</div>
+                    <h3 id="titulo-final-quiz" tabindex="-1">¡Desafío completado!</h3>
+                    <p>Este es tu resultado:</p>
+                    <div class="resultado-porcentaje" id="porcentaje-quiz">0%</div>
+                    <p id="detalle-quiz"></p>
+                    <button type="button" class="boton-juego" id="repetir-quiz">
+                        Volver a jugar
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- JUEGO DE ESCRIBIR CÓDIGO -->
+
+            <div class="juego-panel" id="panel-codigo" hidden>
+
+                <div class="juego-panel-superior">
+                    <div>
+                        <span class="juegos-etiqueta">DESAFÍO 02</span>
+                        <h3><span aria-hidden="true">💻</span> Desarrollador de código</h3>
+                    </div>
+                    <span class="juego-contador" id="contador-codigo">
+                        Ejercicio 1 de 4
+                    </span>
+                </div>
+
+                <div class="barra-progreso">
+                    <div id="progreso-codigo"></div>
+                </div>
+
+                <div class="instruccion-codigo">
+                    <span class="pregunta-etiqueta">TU MISIÓN</span>
+                    <h3 id="titulo-codigo" tabindex="-1"></h3>
+                    <p id="descripcion-codigo"></p>
+                    <div class="pista-codigo" id="pista-codigo"></div>
+                </div>
+
+                <div class="editor-codigo">
+
+                    <div class="editor-superior">
+                        <div class="editor-puntos" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span>mi_programa.py</span>
+                        <span>PYTHON</span>
+                    </div>
+
+                    <label for="respuesta-codigo">
+                        Escribe tu código aquí:
+                    </label>
+
+                    <textarea
+                        id="respuesta-codigo"
+                        rows="7"
+                        spellcheck="false"
+                        placeholder="# Escribe tu solución en Python..."
+                    ></textarea>
+
+                    <div class="editor-inferior">
+                        <span>Python | Editor de práctica</span>
+                        <span>Tu creatividad, tu código.</span>
+                    </div>
+
+                </div>
+
+                <button type="button" class="boton-juego" id="comprobar-codigo">
+                    Comprobar mi código
+                </button>
+
+                <p id="resultado-codigo" class="mensaje-juego"
+                    role="status" aria-live="polite"></p>
+
+                <div class="juego-acciones">
+                    <button type="button" class="boton-juego" id="siguiente-codigo" disabled>
+                        Siguiente ejercicio →
+                    </button>
+
+                    <button type="button" class="boton-secundario" id="salir-codigo">
+                        Salir del juego
+                    </button>
+                </div>
+
+                <div id="final-codigo" class="resultado-final" hidden>
+                    <div class="resultado-icono" aria-hidden="true">🚀</div>
+                    <h3 id="titulo-final-codigo" tabindex="-1">¡Terminaste los desafíos!</h3>
+                    <p>Tu rendimiento en programación:</p>
+                    <div class="resultado-porcentaje" id="porcentaje-codigo">0%</div>
+                    <p id="detalle-codigo"></p>
+                    <button type="button" class="boton-juego" id="repetir-codigo">
+                        Intentar nuevamente
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="bloque">
+            <h2>2. Lenguajes de programación</h2>
+
+            <h3>HTML</h3>
+            <p>Permite construir la estructura de una página web.</p>
+
+            <h3>CSS</h3>
+            <p>
+                Permite diseñar la apariencia, los colores y la
+                distribución de una página web.
+            </p>
+
+            <h3>JavaScript</h3>
+            <p>
+                Permite agregar interactividad y comportamiento
+                a las páginas web.
+            </p>
+
+            <h3>Python</h3>
+            <p>
+                Es un lenguaje utilizado para desarrollar programas,
+                automatizar procesos y trabajar con datos.
+            </p>
+        </section>
+
+        <section class="bloque">
+            <h2>3. Ejemplo de programación en Python</h2>
+
+            <p>Programa que solicita el nombre y muestra un saludo:</p>
+
+            <pre><code>nombre = input("Escribe tu nombre: ")
+
+print("Bienvenido a Código En Quiebra", nombre)</code></pre>
+        </section>
+
+        <section class="bloque">
+            <h2>4. Ejercicios prácticos</h2>
+
+            <h3>Ejercicio 1. Variables</h3>
+            <p>
+                Crea un programa que solicite el nombre y la edad
+                de una persona y muestre sus datos.
+            </p>
+
+            <h3>Ejercicio 2. Condicionales</h3>
+            <p>
+                Solicita una edad y determina si la persona
+                es mayor o menor de edad.
+            </p>
+
+            <h3>Ejercicio 3. Ciclos</h3>
+            <p>
+                Realiza un programa que muestre los números
+                del 1 al 10.
+            </p>
+
+            <h3>Ejercicio 4. Operaciones</h3>
+            <p>
+                Solicita dos números y calcula su suma,
+                resta, multiplicación y división.
+            </p>
+        </section>
+
+        <section class="bloque">
+            <h2>5. Aplicación en el mundo laboral</h2>
+
+            <p>
+                La programación permite desarrollar sistemas
+                empresariales, páginas web, aplicaciones,
+                plataformas educativas y herramientas para
+                automatizar procesos.
+            </p>
+
+            <ul>
+                <li>Desarrollo de software.</li>
+                <li>Creación de aplicaciones web.</li>
+                <li>Automatización de actividades.</li>
+                <li>Análisis y procesamiento de información.</li>
+                <li>Desarrollo de soluciones tecnológicas.</li>
+            </ul>
+        </section>
+
+        <a class="boton" href="index.html">Volver al inicio</a>
+
+    </main>
+
+    <footer class="pie">
+        <p>© 2026 Código En Quiebra.</p>
+        <p>Área de Programación.</p>
+    </footer>
+
+    <script type="module" src="js/juegos_programacion.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tu perfil de estudiante en Código En Quiebra.">
+    <title>Mi perfil | Código En Quiebra</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <header class="encabezado">
+        <a class="logo" href="index.html">Código <span>En Quiebra</span></a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="programacion.html">Programación</a>
+            <a href="contabilidad.html">Contabilidad y PUC</a>
+            <a href="matematicas.html">Matemáticas</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a class="activo" href="perfil.html" aria-current="page">Mi perfil</a>
+        </nav>
+    </header>
+
+    <main id="contenido" class="contenido-pagina" tabindex="-1">
+
+        <span class="etiqueta">MI ESPACIO</span>
+
+        <h1>Mi perfil</h1>
+
+        <section id="sin-datos" class="panel" hidden>
+            <h2>Aún no tienes un perfil</h2>
+            <p>
+                Completa tu ficha en la página de inicio y vuelve aquí
+                para ver toda tu información.
+            </p>
+            <a class="boton" href="index.html#registro">Crear mi perfil</a>
+        </section>
+
+        <section id="datos" class="panel perfil-panel" hidden>
+
+            <div class="perfil-cabecera">
+                <div class="perfil-avatar" id="perfil-inicial" aria-hidden="true">?</div>
+                <div>
+                    <h2 id="perfil-nombre">Tu nombre</h2>
+                    <p id="perfil-programa-corto">Programa de formación</p>
+                </div>
+            </div>
+
+            <article class="ficha">
+                <p><strong>Nombre completo:</strong> <span id="perfil-nombre-completo"></span></p>
+                <p><strong>Programa de formación:</strong> <span id="perfil-programa"></span></p>
+                <p><strong>Correo electrónico:</strong> <span id="perfil-correo"></span></p>
+                <p><strong>Mi frase:</strong> <span id="perfil-frase"></span></p>
+            </article>
+
+            <div class="juego-acciones">
+                <a class="boton" href="index.html#registro">Editar mis datos</a>
+                <button type="button" class="boton-secundario" id="borrar-perfil">Borrar mis datos</button>
+            </div>
+
+            <p id="perfil-mensaje" role="status" aria-live="polite"></p>
+
+        </section>
+
+        <a class="boton" href="index.html">Volver al inicio</a>
+
+    </main>
+
+    <footer class="pie">
+        <p>© 2026 Código En Quiebra.</p>
+        <p>Mi perfil de estudiante.</p>
+    </footer>
+
+    <script src="js/perfil.js" defer></script>
+</body>
+</html>

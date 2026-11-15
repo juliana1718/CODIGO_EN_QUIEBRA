@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende contabilidad, el PUC, la partida doble y el IVA en Código En Quiebra.">
+    <title>Contabilidad y PUC | Código En Quiebra</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <header class="encabezado">
+        <a class="logo" href="index.html">Código <span>En Quiebra</span></a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="programacion.html">Programación</a>
+            <a class="activo" href="contabilidad.html" aria-current="page">Contabilidad y PUC</a>
+            <a href="matematicas.html">Matemáticas</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="perfil.html">Mi perfil</a>
+        </nav>
+    </header>
+
+    <main id="contenido" class="contenido-pagina" tabindex="-1">
+
+        <span class="etiqueta">ÁREA DE APRENDIZAJE 02</span>
+
+        <h1>Contabilidad y PUC</h1>
+
+        <p>
+            Conoce el Plan Único de Cuentas, aprende a registrar hechos
+            económicos con la partida doble y practica el cálculo del IVA.
+        </p>
+
+        <section class="zona-juegos" id="juegos_contabilidad">
+
+            <div class="juegos-encabezado">
+                <span class="juegos-etiqueta">ZONA INTERACTIVA</span>
+                <h2><span aria-hidden="true">📒</span> Desafíos Contables</h2>
+                <p>
+                    Practica los códigos del PUC, la partida doble y el IVA.
+                    Cada respuesta te explica el porqué.
+                </p>
+            </div>
+
+            <div class="juegos-tarjetas">
+
+                <article class="juego-tarjeta">
+                    <div class="juego-icono" aria-hidden="true">🗂️</div>
+                    <h3>Reto 1: Clasifica el PUC</h3>
+                    <p>Identifica la clase y el código de las cuentas más usadas.</p>
+                    <span class="juego-nivel">8 preguntas · Nivel básico</span>
+                    <button type="button" class="boton-juego" id="iniciar-puc">
+                        Comenzar desafío →
+                    </button>
+                </article>
+
+                <article class="juego-tarjeta">
+                    <div class="juego-icono" aria-hidden="true">⚖️</div>
+                    <h3>Reto 2: Débito y crédito</h3>
+                    <p>Decide qué cuentas se afectan en cada hecho económico.</p>
+                    <span class="juego-nivel">6 preguntas · Nivel intermedio</span>
+                    <button type="button" class="boton-juego" id="iniciar-partida">
+                        Comenzar desafío →
+                    </button>
+                </article>
+
+                <article class="juego-tarjeta">
+                    <div class="juego-icono" aria-hidden="true">🧾</div>
+                    <h3>Reto 3: Calcula el IVA</h3>
+                    <p>Resuelve operaciones con IVA generado, descontable y a pagar.</p>
+                    <span class="juego-nivel">5 problemas · Nivel práctico</span>
+                    <button type="button" class="boton-juego" id="iniciar-iva">
+                        Comenzar a calcular →
+                    </button>
+                </article>
+
+            </div>
+
+            <!-- Los paneles de los juegos se crean aquí con la plantilla -->
+            <div id="contenedor-juegos"></div>
+
+        </section>
+
+        <section class="bloque">
+            <h2>2. ¿Qué es el PUC?</h2>
+            <p>
+                El Plan Único de Cuentas (PUC) es un listado ordenado de códigos
+                y nombres que permite registrar la información contable de forma
+                uniforme. En Colombia, el modelo más conocido es el del Decreto 2650
+                de 1993. Cada código indica la clase, el grupo, la cuenta y la
+                subcuenta de un hecho económico.
+            </p>
+            <p>
+                Ejemplo: en <strong>1105</strong>, el <strong>1</strong> es la clase
+                (Activo), el <strong>11</strong> es el grupo (Disponible) y el
+                <strong>1105</strong> es la cuenta (Caja).
+            </p>
+        </section>
+
+        <section class="bloque">
+            <h2>3. Las clases del PUC</h2>
+            <div class="tabla-contenedor" role="region" aria-label="Tabla de clases del PUC" tabindex="0">
+                <table>
+                    <caption>Clases del Plan Único de Cuentas</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Clase</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">¿Qué registra?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><th scope="row">Activo</th><td>Bienes y derechos: caja, bancos, clientes, inventarios.</td></tr>
+                        <tr><td>2</td><th scope="row">Pasivo</th><td>Obligaciones: proveedores, préstamos, impuestos por pagar.</td></tr>
+                        <tr><td>3</td><th scope="row">Patrimonio</th><td>Aportes de los dueños y resultados acumulados.</td></tr>
+                        <tr><td>4</td><th scope="row">Ingresos</th><td>Ventas y otros ingresos del negocio.</td></tr>
+                        <tr><td>5</td><th scope="row">Gastos</th><td>Salarios, servicios, arrendamientos, gastos financieros.</td></tr>
+                        <tr><td>6</td><th scope="row">Costos de ventas</th><td>Costo de la mercancía o los servicios vendidos.</td></tr>
+                        <tr><td>7</td><th scope="row">Costos de producción</th><td>Materia prima, mano de obra y costos indirectos.</td></tr>
+                        <tr><td>8</td><th scope="row">Cuentas de orden deudoras</th><td>Derechos y contingencias de control.</td></tr>
+                        <tr><td>9</td><th scope="row">Cuentas de orden acreedoras</th><td>Responsabilidades contingentes de control.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="bloque">
+            <h2>4. Códigos frecuentes del PUC</h2>
+            <div class="tabla-contenedor" role="region" aria-label="Tabla de códigos frecuentes del PUC" tabindex="0">
+                <table>
+                    <caption>Cuentas más usadas en contabilidad básica</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Nombre de la cuenta</th>
+                            <th scope="col">Clase</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">1105</th><td>Caja</td><td>Activo</td></tr>
+                        <tr><th scope="row">1110</th><td>Bancos</td><td>Activo</td></tr>
+                        <tr><th scope="row">1305</th><td>Clientes</td><td>Activo</td></tr>
+                        <tr><th scope="row">1435</th><td>Mercancías no fabricadas por la empresa</td><td>Activo</td></tr>
+                        <tr><th scope="row">1524</th><td>Equipo de oficina</td><td>Activo</td></tr>
+                        <tr><th scope="row">1528</th><td>Equipo de computación y comunicación</td><td>Activo</td></tr>
+                        <tr><th scope="row">1540</th><td>Flota y equipo de transporte</td><td>Activo</td></tr>
+                        <tr><th scope="row">2105</th><td>Bancos nacionales (obligaciones financieras)</td><td>Pasivo</td></tr>
+                        <tr><th scope="row">2205</th><td>Proveedores nacionales</td><td>Pasivo</td></tr>
+                        <tr><th scope="row">2365</th><td>Retención en la fuente</td><td>Pasivo</td></tr>
+                        <tr><th scope="row">2408</th><td>Impuesto sobre las ventas por pagar (IVA)</td><td>Pasivo</td></tr>
+                        <tr><th scope="row">2505</th><td>Salarios por pagar</td><td>Pasivo</td></tr>
+                        <tr><th scope="row">3105</th><td>Capital suscrito y pagado</td><td>Patrimonio</td></tr>
+                        <tr><th scope="row">3605</th><td>Utilidad del ejercicio</td><td>Patrimonio</td></tr>
+                        <tr><th scope="row">4135</th><td>Comercio al por mayor y al por menor</td><td>Ingresos</td></tr>
+                        <tr><th scope="row">5105</th><td>Gastos de personal</td><td>Gastos</td></tr>
+                        <tr><th scope="row">5135</th><td>Servicios</td><td>Gastos</td></tr>
+                        <tr><th scope="row">6135</th><td>Comercio al por mayor y al por menor</td><td>Costos de ventas</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                Verifica siempre los códigos con la normativa vigente y con las
+                indicaciones de tu docente, porque el PUC puede cambiar según el
+                tipo de empresa y el marco contable que use.
+            </p>
+        </section>
+
+        <section class="bloque">
+            <h2>5. Partida doble</h2>
+            <p>
+                Cada hecho económico afecta como mínimo dos cuentas: lo que se
+                debita siempre es igual a lo que se acredita.
+            </p>
+            <ul>
+                <li>Los activos y los gastos aumentan con débito.</li>
+                <li>Los pasivos, el patrimonio y los ingresos aumentan con crédito.</li>
+            </ul>
+
+            <h3>Ejemplo: compra de mercancía de contado con IVA</h3>
+            <p>Compras mercancía por $1.000.000 más IVA del 19 % y pagas en efectivo.</p>
+            <div class="tabla-contenedor" role="region" aria-label="Asiento contable de ejemplo" tabindex="0">
+                <table>
+                    <caption>Asiento contable</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Cuenta</th>
+                            <th scope="col">Débito</th>
+                            <th scope="col">Crédito</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1435</td><td>Mercancías no fabricadas por la empresa</td><td>$1.000.000</td><td></td></tr>
+                        <tr><td>2408</td><td>IVA descontable</td><td>$190.000</td><td></td></tr>
+                        <tr><td>1105</td><td>Caja</td><td></td><td>$1.190.000</td></tr>
+                        <tr><th scope="row" colspan="2">Sumas iguales</th><td>$1.190.000</td><td>$1.190.000</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="bloque">
+            <h2>6. El IVA</h2>
+            <p>
+                El impuesto sobre las ventas (IVA) se suma al precio de venta.
+                La tarifa general en Colombia es del 19 %. Algunos bienes y
+                servicios tienen tarifa diferencial, están exentos o excluidos.
+            </p>
+
+            <h3>Fórmulas con tarifa del 19 %</h3>
+            <ul>
+                <li><strong>IVA</strong> = valor antes de IVA × 0,19</li>
+                <li><strong>Total</strong> = valor antes de IVA × 1,19</li>
+                <li><strong>Valor antes de IVA</strong> = total ÷ 1,19</li>
+                <li><strong>IVA a pagar</strong> = IVA generado − IVA descontable</li>
+            </ul>
+
+            <h3>Ejemplo</h3>
+            <p>
+                Vendes por $1.000.000 y compras por $600.000 (valores antes de IVA).
+                IVA generado: $190.000. IVA descontable: $114.000.
+                IVA a pagar: $76.000.
+            </p>
+            <p>
+                Confirma la tarifa y las reglas vigentes en la página de la DIAN
+                antes de aplicarlas a un caso real.
+            </p>
+        </section>
+
+        <section class="bloque">
+            <h2>7. Aplicación en el mundo laboral</h2>
+            <p>
+                La contabilidad permite conocer la situación financiera de un
+                negocio y tomar decisiones con información confiable.
+            </p>
+            <ul>
+                <li>Auxiliar contable y registro de facturas.</li>
+                <li>Liquidación y declaración de impuestos.</li>
+                <li>Conciliaciones bancarias.</li>
+                <li>Elaboración de estados financieros.</li>
+                <li>Control de inventarios, costos y presupuestos.</li>
+            </ul>
+        </section>
+
+        <a class="boton" href="index.html">Volver al inicio</a>
+
+    </main>
+
+    <footer class="pie">
+        <p>© 2026 Código En Quiebra.</p>
+        <p>Área de Contabilidad y PUC.</p>
+    </footer>
+
+    <!-- Plantilla que el JavaScript copia para cada juego -->
+    <template id="plantilla-juego">
+        <div class="juego-panel" hidden>
+
+            <div class="juego-panel-superior">
+                <div>
+                    <span class="juegos-etiqueta" data-campo="etiqueta"></span>
+                    <h3 data-campo="titulo"></h3>
+                </div>
+                <span class="juego-contador" data-campo="contador"></span>
+            </div>
+
+            <div class="barra-progreso" role="progressbar" aria-label="Progreso del desafío"
+                aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div data-campo="progreso"></div>
+            </div>
+
+            <div class="pregunta-contenedor" data-parte>
+                <span class="pregunta-etiqueta" data-campo="tipo"></span>
+                <h3 tabindex="-1" data-campo="pregunta"></h3>
+                <p data-campo="ayuda"></p>
+            </div>
+
+            <div class="opciones-quiz" data-campo="opciones" data-parte></div>
+
+            <div class="entrada-numero" data-campo="entrada" data-parte hidden>
+                <label>
+                    Tu respuesta en pesos
+                    <input type="text" inputmode="decimal" autocomplete="off" data-campo="numero">
+                </label>
+                <button type="button" class="boton-juego" data-campo="comprobar">
+                    Comprobar mi respuesta
+                </button>
+            </div>
+
+            <p class="mensaje-juego" role="status" aria-live="polite" data-campo="mensaje" data-parte></p>
+
+            <div class="juego-acciones" data-parte>
+                <button type="button" class="boton-juego" data-campo="siguiente" disabled>
+                    Siguiente pregunta →
+                </button>
+                <button type="button" class="boton-secundario" data-campo="salir">
+                    Salir del juego
+                </button>
+            </div>
+
+            <div class="resultado-final" data-campo="final" hidden>
+                <div class="resultado-icono" aria-hidden="true">🏆</div>
+                <h3 tabindex="-1" data-campo="titulo-final">¡Desafío completado!</h3>
+                <p>Este es tu resultado:</p>
+                <div class="resultado-porcentaje" data-campo="porcentaje">0%</div>
+                <p data-campo="detalle"></p>
+                <button type="button" class="boton-juego" data-campo="repetir">
+                    Volver a jugar
+                </button>
+            </div>
+
+        </div>
+    </template>
+
+<script src="js/datos_contabilidad.js" defer></script>
+</body>
+</html>

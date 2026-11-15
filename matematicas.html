@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Practica operaciones, fracciones, porcentajes, regla de tres y ecuaciones en Código En Quiebra.">
+    <title>Matemáticas | Código En Quiebra</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <header class="encabezado">
+        <a class="logo" href="index.html">Código <span>En Quiebra</span></a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="programacion.html">Programación</a>
+            <a href="contabilidad.html">Contabilidad y PUC</a>
+            <a class="activo" href="matematicas.html" aria-current="page">Matemáticas</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="perfil.html">Mi perfil</a>
+        </nav>
+    </header>
+
+    <main id="contenido" class="contenido-pagina" tabindex="-1">
+
+        <span class="etiqueta">ÁREA DE APRENDIZAJE 03</span>
+
+        <h1>Matemáticas</h1>
+
+        <p>
+            Repasa las operaciones, las fracciones, los porcentajes, la regla
+            de tres y las ecuaciones. Después ponte a prueba con los desafíos.
+        </p>
+
+        <section class="zona-juegos" id="juegos_matematicas">
+
+            <div class="juegos-encabezado">
+                <span class="juegos-etiqueta">ZONA INTERACTIVA</span>
+                <h2><span aria-hidden="true">🧮</span> Desafíos Matemáticos</h2>
+                <p>
+                    Practica la jerarquía de operaciones, los porcentajes y las
+                    ecuaciones. Cada respuesta te explica el porqué.
+                </p>
+            </div>
+
+            <div class="juegos-tarjetas">
+
+                <article class="juego-tarjeta">
+                    <div class="juego-icono" aria-hidden="true">➕</div>
+                    <h3>Reto 1: Operaciones</h3>
+                    <p>Jerarquía de operaciones, potencias, fracciones y MCM.</p>
+                    <span class="juego-nivel">8 preguntas · Nivel básico</span>
+                    <button type="button" class="boton-juego" id="iniciar-operaciones">
+                        Comenzar desafío →
+                    </button>
+                </article>
+
+                <article class="juego-tarjeta">
+                    <div class="juego-icono" aria-hidden="true">💯</div>
+                    <h3>Reto 2: Porcentajes</h3>
+                    <p>Descuentos, aumentos y regla de tres directa e inversa.</p>
+                    <span class="juego-nivel">6 problemas · Nivel práctico</span>
+                    <button type="button" class="boton-juego" id="iniciar-porcentajes">
+                        Comenzar a calcular →
+                    </button>
+                </article>
+
+                <article class="juego-tarjeta">
+                    <div class="juego-icono" aria-hidden="true">🔎</div>
+                    <h3>Reto 3: Encuentra x</h3>
+                    <p>Despeja la incógnita en ecuaciones de primer grado.</p>
+                    <span class="juego-nivel">5 problemas · Nivel intermedio</span>
+                    <button type="button" class="boton-juego" id="iniciar-ecuaciones">
+                        Comenzar a calcular →
+                    </button>
+                </article>
+
+            </div>
+
+            <div id="contenedor-juegos"></div>
+
+        </section>
+
+        <section class="bloque">
+            <h2>2. Jerarquía de operaciones</h2>
+            <p>
+                Cuando una operación tiene varios signos, se resuelve en este orden:
+            </p>
+            <ul>
+                <li>1.º Paréntesis.</li>
+                <li>2.º Potencias y raíces.</li>
+                <li>3.º Multiplicaciones y divisiones, de izquierda a derecha.</li>
+                <li>4.º Sumas y restas, de izquierda a derecha.</li>
+            </ul>
+            <h3>Ejemplo</h3>
+            <p>
+                8 + 4 × 3 = 8 + 12 = <strong>20</strong>. Primero se multiplica
+                y después se suma.
+            </p>
+        </section>
+
+        <section class="bloque">
+            <h2>3. Fracciones</h2>
+            <p>
+                Para sumar fracciones con el mismo denominador, se suman los
+                numeradores. Si los denominadores son distintos, primero se busca
+                un denominador común, usando el mínimo común múltiplo (MCM).
+            </p>
+            <h3>Ejemplo</h3>
+            <p>
+                1/2 + 1/4: el MCM de 2 y 4 es 4. Entonces 1/2 = 2/4 y
+                2/4 + 1/4 = <strong>3/4</strong>.
+            </p>
+        </section>
+
+        <section class="bloque">
+            <h2>4. Porcentajes</h2>
+            <p>El porcentaje indica cuántas partes de cada 100 se toman.</p>
+            <ul>
+                <li><strong>Parte</strong> = total × porcentaje ÷ 100</li>
+                <li><strong>Con descuento</strong> = precio × (1 − porcentaje ÷ 100)</li>
+                <li><strong>Con aumento</strong> = precio × (1 + porcentaje ÷ 100)</li>
+                <li><strong>Total</strong> = parte ÷ (porcentaje ÷ 100)</li>
+            </ul>
+            <h3>Ejemplo</h3>
+            <p>
+                Un producto de $80.000 con 15 % de descuento:
+                80.000 × 0,85 = <strong>$68.000</strong>.
+            </p>
+        </section>
+
+        <section class="bloque">
+            <h2>5. Regla de tres</h2>
+            <p>
+                Sirve para encontrar un valor desconocido cuando hay una relación
+                entre dos magnitudes.
+            </p>
+            <ul>
+                <li><strong>Directa:</strong> si una aumenta, la otra también (más cuadernos, más dinero).</li>
+                <li><strong>Inversa:</strong> si una aumenta, la otra disminuye (más obreros, menos días).</li>
+            </ul>
+            <h3>Ejemplo</h3>
+            <p>
+                3 cuadernos cuestan $12.000. Cada uno vale 12.000 ÷ 3 = 4.000,
+                así que 5 cuadernos cuestan <strong>$20.000</strong>.
+            </p>
+        </section>
+
+        <section class="bloque">
+            <h2>6. Ecuaciones de primer grado</h2>
+            <p>
+                Para encontrar x, se deja sola la incógnita aplicando la operación
+                contraria en los dos lados de la igualdad.
+            </p>
+            <h3>Ejemplo: 2x + 5 = 21</h3>
+            <ul>
+                <li>Resta 5 en ambos lados: 2x = 16.</li>
+                <li>Divide entre 2 en ambos lados: <strong>x = 8</strong>.</li>
+                <li>Comprueba: 2 × 8 + 5 = 21.</li>
+            </ul>
+        </section>
+
+        <section class="bloque">
+            <h2>7. Aplicación en el mundo laboral</h2>
+            <p>
+                Las matemáticas básicas se usan todos los días para calcular
+                precios, descuentos, nómina, inventarios y presupuestos.
+            </p>
+            <ul>
+                <li>Cálculo de descuentos y precios de venta.</li>
+                <li>Proporciones en recetas, materiales y mezclas.</li>
+                <li>Lógica y algoritmos en programación.</li>
+                <li>Cálculo del IVA y de intereses en contabilidad.</li>
+            </ul>
+        </section>
+
+        <a class="boton" href="index.html">Volver al inicio</a>
+
+    </main>
+
+    <footer class="pie">
+        <p>© 2026 Código En Quiebra.</p>
+        <p>Área de Matemáticas.</p>
+    </footer>
+
+    <template id="plantilla-juego">
+        <div class="juego-panel" hidden>
+
+            <div class="juego-panel-superior">
+                <div>
+                    <span class="juegos-etiqueta" data-campo="etiqueta"></span>
+                    <h3 data-campo="titulo"></h3>
+                </div>
+                <span class="juego-contador" data-campo="contador"></span>
+            </div>
+
+            <div class="barra-progreso" role="progressbar" aria-label="Progreso del desafío"
+                aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div data-campo="progreso"></div>
+            </div>
+
+            <div class="pregunta-contenedor" data-parte>
+                <span class="pregunta-etiqueta" data-campo="tipo"></span>
+                <h3 tabindex="-1" data-campo="pregunta"></h3>
+                <p data-campo="ayuda"></p>
+            </div>
+
+            <div class="opciones-quiz" data-campo="opciones" data-parte></div>
+
+            <div class="entrada-numero" data-campo="entrada" data-parte hidden>
+                <label>
+                    Tu respuesta (solo el número)
+                    <input type="text" inputmode="decimal" autocomplete="off" data-campo="numero">
+                </label>
+                <button type="button" class="boton-juego" data-campo="comprobar">
+                    Comprobar mi respuesta
+                </button>
+            </div>
+
+            <p class="mensaje-juego" role="status" aria-live="polite" data-campo="mensaje" data-parte></p>
+
+            <div class="juego-acciones" data-parte>
+                <button type="button" class="boton-juego" data-campo="siguiente" disabled>
+                    Siguiente pregunta →
+                </button>
+                <button type="button" class="boton-secundario" data-campo="salir">
+                    Salir del juego
+                </button>
+            </div>
+
+            <div class="resultado-final" data-campo="final" hidden>
+                <div class="resultado-icono" aria-hidden="true">🏆</div>
+                <h3 tabindex="-1" data-campo="titulo-final">¡Desafío completado!</h3>
+                <p>Este es tu resultado:</p>
+                <div class="resultado-porcentaje" data-campo="porcentaje">0%</div>
+                <p data-campo="detalle"></p>
+                <button type="button" class="boton-juego" data-campo="repetir">
+                    Volver a jugar
+                </button>
+            </div>
+
+        </div>
+    </template>
+
+    <script src="js/juegos_matematicas.js" defer></script>
+</body>
+</html>

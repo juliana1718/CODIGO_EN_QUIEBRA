@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo tecnológico de Código En Quiebra: equipos, software y recursos para aprender.">
+    <title>Catálogo tecnológico | Código En Quiebra</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <header class="encabezado">
+        <a class="logo" href="index.html">Código <span>En Quiebra</span></a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="programacion.html">Programación</a>
+            <a href="contabilidad.html">Contabilidad y PUC</a>
+            <a href="matematicas.html">Matemáticas</a>
+            <a class="activo" href="catalogo.html" aria-current="page">Catálogo</a>
+            <a href="perfil.html">Mi perfil</a>
+        </nav>
+    </header>
+
+    <main id="contenido" class="contenido-pagina" tabindex="-1">
+
+        <span class="etiqueta">ÁREA DE APRENDIZAJE 04</span>
+
+        <h1>Catálogo tecnológico</h1>
+
+        <p>
+            Equipos, programas y recursos que te sirven para estudiar
+            programación, contabilidad y matemáticas. Filtra por categoría
+            o busca por nombre.
+        </p>
+
+        <section class="bloque">
+            <div class="campo">
+                <label for="buscar">Buscar en el catálogo</label>
+                <input type="search" id="buscar" placeholder="Ejemplo: teclado, Python, Excel..." autocomplete="off">
+            </div>
+
+            <div class="filtros" role="group" aria-label="Filtrar por categoría">
+                <button type="button" class="boton-secundario" data-filtro="todos" aria-pressed="true">Todos</button>
+                <button type="button" class="boton-secundario" data-filtro="Equipos" aria-pressed="false">Equipos</button>
+                <button type="button" class="boton-secundario" data-filtro="Software" aria-pressed="false">Software</button>
+                <button type="button" class="boton-secundario" data-filtro="Aprendizaje" aria-pressed="false">Aprendizaje</button>
+            </div>
+
+            <p id="conteo" class="conteo-catalogo" role="status" aria-live="polite"></p>
+
+            <div id="lista-catalogo" class="rejilla-tarjetas"></div>
+        </section>
+
+        <a class="boton" href="index.html">Volver al inicio</a>
+
+    </main>
+
+    <footer class="pie">
+        <p>© 2026 Código En Quiebra.</p>
+        <p>Catálogo tecnológico.</p>
+    </footer>
+
+    <script src="js/catalogo.js" defer></script>
+</body>
+</html>
